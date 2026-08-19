@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <meta name="description"
+        content="RAIHOME Hotel - Hotel en la avenida nutibara en Medellín, Colombia. En el barrio laureles, detras de la universidad UPB.">
+    <title>Raihome Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <title>RAIHOME Hotel | Sitio en Construcción</title>
-
-    <meta name="description" content="RAIHOME Hotel. Muy pronto estaremos disponibles.">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
+    <header>
+        <div class="top-bar">
+            <a href="tel:+573332331607">
+                <i class="bi bi-telephone-fill"></i>
+                +57 333 233 1607
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-white">
+            <div class="container-fluid">
+                <img src="./img/logo.png" alt="logo" id="logo" srcset="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Habitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">Reservar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="bannerCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannerCarrusel" data-bs-slide-to="0" class="active"
+                aria-current="true"></button>
+            <button type="button" data-bs-target="#bannerCarrusel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#bannerCarrusel" data-bs-slide-to="2"></button>
+        </div>
 
-    <main class="container">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/habitacion5.jpeg" class="d-block w-100" alt="Imagen principal 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Tu mejor opción en Medellín</h2>
+                    <p>Disfruta de una experiencia única</p>
+                </div>
+            </div>
 
-        <img src="img/logo.png" alt="RAIHOME Hotel" class="logo">
+            <div class="carousel-item">
+                <img src="./img/habitacion4.jpeg" class="d-block w-100" alt="Imagen principal 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Habitaciones cómodas y amplias</h2>
+                    <p>Descansa como te mereces</p>
+                </div>
+            </div>
 
-        <h1>RAIHOME HOTEL</h1>
+            <div class="carousel-item">
+                <img src="./img/habitacion3.jpeg" class="d-block w-100" alt="Imagen principal 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Ubicación privilegiada</h2>
+                    <p>En el corazón de la ciudad</p>
+                </div>
+            </div>
+        </div>
 
-        <h2>🚧 Sitio web en construcción 🚧</h2>
-
-        <p>
-
-            Estamos preparando una experiencia completamente nueva.
-
-            Muy pronto podrás conocer nuestras habitaciones y realizar
-            tus reservas directamente desde nuestro sitio web.
-
-        </p>
-
-        <a
-            href="https://wa.me/573332331607?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20RAIHOME%20Hotel"
-            class="btn"
-            target="_blank">
-
-            Reservar por WhatsApp
-
-        </a>
-
-        <footer>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    <!-- Historia del hotel -->
+    <section class="about-hotel">
+        <div class="about-container">
+            <h2>Raihome Hotel</h2>
 
             <p>
-
-                Instagram:
-                @raihomehotel
-
-                <br><br>
-
-                Facebook:
-                Rai Home Hotel
-
-                <br><br>
-
-                © 2026 RAIHOME Hotel
-
+                <strong>Raihome Hotel</strong> está ubicado en una de las zonas más
+                privilegiadas de <strong>Medellín</strong>, en el sector de Laureles,
+                cerca de la Universidad Pontificia Bolivariana y de algunos de los
+                lugares más importantes de la ciudad.
             </p>
 
-        </footer>
+            <p>
+                Nuestro hotel ofrece un espacio pensado para quienes buscan
+                <strong>comodidad, tranquilidad y una excelente ubicación</strong>
+                durante su estadía en Medellín.
+            </p>
 
-    </main>
+            <p>
+                Contamos con <strong>habitaciones cómodas y acogedoras</strong>,
+                diseñadas para ofrecer una experiencia agradable tanto a quienes
+                visitan la ciudad por turismo como a quienes llegan por negocios
+                o estadías de corta duración.
+            </p>
 
+            <p>
+                En <strong>Raihome Hotel</strong> queremos que cada huésped se
+                sienta como en casa, disfrutando de una atención cercana y de un
+                espacio ideal para descansar y conocer Medellín.
+            </p>
+
+            <a href="#" class="about-button">Descubre Raihome Hotel</a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>

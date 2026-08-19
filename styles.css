@@ -1,130 +1,179 @@
-*{
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+#logo {
+    width: 4.7rem;
+    height: 4.7rem;
+    object-fit: contain;
 
 }
 
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#000;
-
-    color:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    min-height:100vh;
-
-    text-align:center;
-
+.top-bar {
+    text-align: right;
+    padding: 8px 2rem;
+    font-size: 12px;
 }
 
-.container{
-
-    width:90%;
-    max-width:700px;
-
-    padding:40px;
-
+.top-bar a {
+    text-decoration: none;
+    color: #fff;
 }
 
-.logo{
-
-    width:250px;
-
-    margin-bottom:40px;
-
+.top-bar i {
+    font-size: 12px;
+    margin-right: 6px;
 }
 
-h1{
-
-    font-size:2.7rem;
-
-    letter-spacing:4px;
-
-    margin-bottom:20px;
-
+.navbar {
+    background-color: transparent !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 15px;
+    color: #fff !important;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-h2{
-
-    color:#d6d6d6;
-
-    font-weight:300;
-
-    margin-bottom:30px;
-
+.nav-link:hover {
+    color: #B08D57 !important;
 }
 
-p{
-
-    color:#c8c8c8;
-
-    line-height:1.8;
-
-    margin-bottom:40px;
-
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #B08D57;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.btn{
-
-    display:inline-block;
-
-    background:#25D366;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:18px 45px;
-
-    border-radius:50px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+.nav-link:hover::after {
+    width: 70%;
 }
 
-.btn:hover{
-
-    transform:scale(1.05);
-
-    background:#1FA855;
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-footer{
-
-    margin-top:60px;
-
-    font-size:15px;
-
-    color:#888;
-
+header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-@media(max-width:768px){
-
-.logo{
-
-width:180px;
-
+header.scrolled .top-bar a,
+header.scrolled .nav-link {
+    color: #333 !important;
 }
 
-h1{
-
-font-size:2rem;
-
+header.scrolled .nav-link:hover {
+    color: #B08D57 !important;
 }
 
+/* Carrousel */
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+  bottom: 80px;
+  left: 80px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.carousel-caption h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  border: none !important;
+}
+
+.carousel-indicators button.active {
+  background-color: #8B0000 !important;
+}
+
+/* Historia del hotel */
+.about-hotel {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 35px;
+}
+
+.about-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-container strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.about-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 28px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #600000;
 }
