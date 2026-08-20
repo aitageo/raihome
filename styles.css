@@ -35,7 +35,7 @@
 }
 .nav-link {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin: 0 15px;
@@ -107,7 +107,7 @@ header.scrolled .nav-link:hover {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px #00000080;
 }
 
 .carousel-caption p {
