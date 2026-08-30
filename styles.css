@@ -35,7 +35,7 @@
 }
 .nav-link {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin: 0 15px;
@@ -175,5 +175,90 @@ header.scrolled .nav-link:hover {
 }
 
 .about-button:hover {
-    background-color: #600000;
+    background-color: #a69731;
+}
+
+/* Reservas */
+
+.reservas {
+    width: 12rem;
+    border-radius: 30px;
+    display: none;
+}
+
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    background-color: #B08D57 !important;
+    border: none;
+    width: 100%;
+    isolation: isolate;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #a69731 !important;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* Room cards */
+
+
+
+.rooms-cards {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.titulo {
+    text-align: center;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px #0000001a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 16px #00000033;
+}
+
+.card img {
+    object-fit: cover;
+    height: 60%;
+    width: 100%;
+}
+
+
+.ubicacion {
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
 }
