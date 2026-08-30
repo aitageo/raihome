@@ -190,7 +190,8 @@ header.scrolled .nav-link:hover {
 .btn-primary {
     position: relative;
     overflow: hidden;
-    background-color: #B08D57 !important;
+    border-radius: 30px;
+    background-color: #000 !important;
     border: none;
     width: 100%;
     isolation: isolate;
