@@ -48,6 +48,7 @@ ${solicitud ? `Solicitud adicional: ${solicitud}` : ""}`;
     const modal = document.getElementById("reservaModal");
     const modalBootstrap = bootstrap.Modal.getInstance(modal);
     modalBootstrap.hide();
+    document.getElementById('formReserva').reset();
     window.location.href = `https://wa.me/${telefono}?text=${mensajeWhatsApp}`;
   }, 1500);
 });
