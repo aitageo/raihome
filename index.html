@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -64,8 +65,8 @@
             <div class="carousel-item active">
                 <img src="./img/habitacion5.jpeg" class="d-block w-100" alt="Imagen principal 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h2>Tu mejor opción en Medellín</h2>
-                    <p>Disfruta de una experiencia única</p>
+                    <h2>Tu estadía en el corazón de Laureles</h2>
+                    <p>Comodidad, tranquilidad y una ubicación privilegiada en Medellín.</p>
                 </div>
             </div>
 
@@ -141,7 +142,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Habitación Doble</h5>
                             <p class="card-text">Disfruta de una habitación cómoda y acogedora para dos personas.</p>
-                            <button class="btn btn-primary">Reservar</button>
+                            <button class="btn btn-primary reservas">Reservar</button>
                         </div>
                     </div>
                 </div>
@@ -151,7 +152,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Habitación Triple</h5>
                             <p class="card-text">Perfecta para grupos pequeños o familias que buscan comodidad.</p>
-                            <button class="btn btn-primary">Reservar</button>
+                            <button class="btn btn-primary reservas">Reservar</button>
                         </div>
                     </div>
                 </div>
@@ -161,7 +162,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Suite Ejecutiva</h5>
                             <p class="card-text">Ideal para quienes buscan un espacio más amplio y elegante.</p>
-                            <button class="btn btn-primary">Reservar</button>
+                            <button class="btn btn-primary reservas">Reservar</button>
                         </div>
                     </div>
                 </div>
@@ -171,24 +172,86 @@
                         <div class="card-body">
                             <h5 class="card-title">Habitación Individual</h5>
                             <p class="card-text">Perfecta para viajeros solos que buscan comodidad y privacidad.</p>
-                            <button class="btn btn-primary">Reservar</button>
+                            <button class="btn btn-primary reservas">Reservar</button>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
     </section>
-     
+
     <!-- Seccion de mapa de ubicacion del hotel -->
     <section class="map">
         <div class="map-container">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.17672214358!2d-75.59390312649778!3d6.240425026391241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429cb6c99a139%3A0x3572927d728f4cca!2sRaiHome%20Hotel!5e0!3m2!1sen!2sco!4v1788101626195!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.17672214358!2d-75.59390312649778!3d6.240425026391241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429cb6c99a139%3A0x3572927d728f4cca!2sRaiHome%20Hotel!5e0!3m2!1sen!2sco!4v1788101626195!5m2!1sen!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="main.js"></script>
+
+    <!-- Modal para el formulario de reserva -->
+    <div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="reservaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservaModalLabel">Consultar disponibilidad </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReserva">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="habitacion" class="form-label"> Tipo de habitació</label>
+                            <select class="form-select" id="habitacion" required>
+                                <option value="" selected disabled>Selecciona una habitación</option>
+                                <option value="Habitación Doble">Habitación Doble</option>
+                                <option value="Habitación Triple">Habitación Triple</option>
+                                <option value="Suite Ejecutiva">Suite Ejecutiva</option>
+                                <option value="Habitación Individual">Habitación Individual</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="llegada" class="form-label">Fecha de llegada</label>
+                                <input type="date" class="form-control" id="llegada" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="salida" class="form-label">
+                                    Fecha de salida
+                                </label>
+                                <input type="date" class="form-control" id="salida" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="huespedes" class="form-label">
+                                Número de huéspedes
+                            </label>
+                            <input type="number" class="form-control" id="huespedes" min="1" max="10" placeholder="2"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="solicitud" class="form-label">
+                                Solicitud adicional
+                                <span class="text-muted">(opcional)</span>
+                            </label>
+                            <textarea class="form-control" id="solicitud" rows="3"
+                                placeholder="¿Tienes alguna solicitud especial?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" id="consultar">Consultar disponibilidad
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

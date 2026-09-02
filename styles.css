@@ -183,7 +183,6 @@ header.scrolled .nav-link:hover {
 .reservas {
     width: 12rem;
     border-radius: 30px;
-    display: none;
 }
 
 
@@ -263,3 +262,5 @@ header.scrolled .nav-link:hover {
 iframe {
     width: 100%;
 }
+
+
