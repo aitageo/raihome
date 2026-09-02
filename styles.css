@@ -183,14 +183,14 @@ header.scrolled .nav-link:hover {
 .reservas {
     width: 12rem;
     border-radius: 30px;
-    display: none;
 }
 
 
 .btn-primary {
     position: relative;
     overflow: hidden;
-    background-color: #B08D57 !important;
+    border-radius: 30px;
+    background-color: #000 !important;
     border: none;
     width: 100%;
     isolation: isolate;
@@ -262,3 +262,5 @@ header.scrolled .nav-link:hover {
 iframe {
     width: 100%;
 }
+
+
