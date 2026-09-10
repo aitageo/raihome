@@ -264,3 +264,12 @@ iframe {
 }
 
 
+.footer-content {
+    width: 100%;
+    background-color: #000;
+    color: #48e;
+    text-align: center;
+    height: 100%;
+}
+
+
