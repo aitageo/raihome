@@ -17,6 +17,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,14 +39,14 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Habitaciones</a>
+                            <a class="nav-link active" href="#habitaciones">Habitaciones</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link active" href="#">Servicios</a>
                         </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link active" href="#">Galeria</a>
-                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#galeria">Galeria</a>
+                        </li>
                         <!-- <button class="btn btn-primary reservas">Reservar</button> -->
                     </ul>
                 </div>
@@ -130,67 +132,129 @@
     </section>
     <!-- Cards de las habitaciones del hotel -->
 
-    <section class="rooms-cards">
+    <section class="rooms-cards" id="habitaciones">
         <div>
             <h2 class="titulo">Habitaciones confortables</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./img/habitacion1.jpeg" class="card-img-top" alt="Habitación 1">
+                        <img src="./img/HabitacionIndivualxNoche.jpeg" class="card-img-top" alt="Habitación 1">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Habitación Doble</h5>
-                            <p class="card-text text-center">Disfruta de una habitación cómoda y acogedora para dos personas. <strong>Tarifa: $120.000 por noche</strong></p>
-                            <button class="btn btn-primary reservas" data-habitacion="Habitación Doble">Reservar</button>
+                            <h5 class="card-title text-center">Habitación Individual</h5>
+                            <p class="card-text text-center">Perfecta para viajeros solos que buscan comodidad <strong>Tarifa: $95.000 por noche</strong></p>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Individual">Reservar</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./img/habitacion2.jpeg" class="card-img-top" alt="Habitación 2">
+                        <img src="./img/HabitacionKing.jpeg" class="card-img-top" alt="Habitación 2">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Suite Ejecutiva</h5>
-                            <p class="card-text text-center">Perfecta para viajeros solos que buscan comodidad.<strong>Tarifa: $100.000 por noche</strong></p>
-                            <button class="btn btn-primary reservas" data-habitacion="Suite Ejecutiva">Reservar</button>
+                            <h5 class="card-title text-center">Habitación King</h5>
+                            <p class="card-text text-center">Ideal para dos personas que buscan comodidad y espacio.<strong>Tarifa: $120.000 por noche</strong></p>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación King">Reservar</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./img/habitacion3.jpeg" class="card-img-top" alt="Habitación 3">
+                        <img src="./img/HabitacionBalcon.jpeg" class="card-img-top" alt="Habitación 3">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Habitacion Triple</h5>
-                            <p class="card-text text-center">Ideal para quienes buscan un espacio más amplio y elegante. <strong>Tarifa: $165.000 por noche</strong></p>
+                            <h5 class="card-title text-center">Habitación con balcón y cama king</h5>
+                            <p class="card-text text-center">Excelente para quienes les gusta una buena vista. <strong>Tarifa: $135.000 por noche</strong></p>
                             <button class="btn btn-primary reservas" data-habitacion="Habitación Triple">Reservar</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./img/Habitacion4.jpeg" class="card-img-top" alt="Habitación 4">
+                        <img src="./img/HabitacionTwin.jpeg" class="card-img-top" alt="Habitación 4">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Habitación Cuadruple</h5>
+                            <h5 class="card-title text-center">Habitación Twin</h5>
                             <p class="card-text text-center">
-                                Perfecta para grupos pequeños o familias que buscan comodidad, <strong>Tarifa: $195.000 por noche</strong>
+                                Perfecta para grupos pequeños o familias que buscan comodidad, <strong>Tarifa: $120.000 por noche</strong>
                             </p>
-                            <button class="btn btn-primary reservas" data-habitacion="Habitación Cuadruple">Reservar</button>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Twin">Reservar</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="./img/habitacion5.jpeg" class="card-img-top" alt="Habitación 5">
+                        <img src="./img/HabitacionTriple.jpeg" class="card-img-top" alt="Habitación 5">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Habitacion Individual</h5>
+                            <h5 class="card-title text-center">Habitación Triple</h5>
                             <p class="card-text text-center">
-                                Ideal para viajeros solos que buscan comodidad y privacidad. <strong>Tarifa: $100.000 por noche</strong>
+                                Lo mejor para tres personas en un sitio acogedor <strong>Tarifa: $165.000 por noche</strong>
                             </p>
-                            <button class="btn btn-primary reservas" data-habitacion="Habitación Individual">Reservar</button>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Triple">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/HabitacionCuadruple.jpeg" class="card-img-top" alt="Habitación 6">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitación Cuádruple</h5>
+                            <p class="card-text text-center">
+                                Ideal para familias o grupos de amigos que buscan comodidad y espacio. <strong>Tarifa: $195.000 por noche</strong>
+                            </p>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Cuádruple">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/HabitacionLargaEstadia.jpeg" class="card-img-top" alt="Habitación 7">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitación Larga estadía</h5>
+                            <p class="card-text text-center">
+                                Para quienes buscan una estancia prolongada con todas las comodidades. <strong>Tarifa: $220.000 por noche</strong>
+                            </p>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Larga estadía">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/CuadrupleAzul.jpeg" class="card-img-top" alt="Habitación 8">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitación Familiar</h5>
+                            <p class="card-text text-center">
+                                Perfecta para familias que buscan comodidad y espacio. <strong>Tarifa: $250.000 por noche</strong>
+                            </p>
+                            <button class="btn btn-primary reservas" data-habitacion="Habitación Familiar">Reservar</button>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-
+    <!-- Sección Galería -->
+<section class="galeria" id="galeria">
+    <div class="galeria-container">
+        <h2 class="titulo">Galería</h2>
+        <p class="text-center text-xl-center">Conoce nuestras instalaciones y espacios.</p>
+        <div class="row">
+            <div class="col-md-4 animate__animated animate__fadeInLeft">
+                <img src="./img/Pasillo1.jpeg" class="img-fluid" alt="Raihome Hotel">
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInLeft">
+                <img src="./img/Pasillo2.jpeg" class="img-fluid" alt="Habitación Raihome Hotel">
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInLeft">
+                <img src="./img/Pasillo3.jpeg" class="img-fluid" alt="Instalaciones del hotel">
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInRight">
+                <img src="./img/Pasillo4.jpeg" class="img-fluid" alt="Instalaciones del hotel">
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInRight">
+                <img src="./img/Balcon.jpeg" class="img-fluid" alt="Instalaciones del hotel">
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInRight">
+                <img src="./img/Baño.jpeg" class="img-fluid" alt="Instalaciones del hotel">
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Seccion de mapa de ubicacion del hotel -->
     <section class="map">
         <div class="map-container">

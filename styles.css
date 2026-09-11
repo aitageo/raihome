@@ -232,16 +232,17 @@ header.scrolled .nav-link:hover {
 
 .card {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
     overflow: hidden;
     margin: 10px auto;
+    border-radius: 40px;
     box-shadow: 0 4px 8px #0000001a;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 10px 10px 16px #00000033;
+    box-shadow: 15px 10px 6px #00000033;
 }
 
 .card img {
@@ -253,6 +254,34 @@ header.scrolled .nav-link:hover {
 
 .ubicacion {
     text-align: center;
+}
+
+#galeria {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+#galeria img {
+    margin-top: 2rem;
+    object-fit: cover;
+    height: 300px;
+    width: 90%;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.galeria img:hover {
+    transform: translateY(-15px);
+    width: 70%;
+    box-shadow: 15px 10px 6px #00000033;
+}
+
+.animate__animated{
+    animation-duration: 1.5s;
 }
 
 .map {

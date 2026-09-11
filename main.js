@@ -8,6 +8,21 @@ window.addEventListener("scroll", function () {
         header.classList.remove("scrolled");
         botonReserva.style.display = "none";
     }
+    
+// const elementos = document.querySelectorAll('.scroll-animate');
+// const observer = new IntersectionObserver((entries) => {
+//        entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//              console.log("ENTRÓ AL VIEWPORT:", entry.target);
+//             entry.target.classList.add('animate__animated');
+//             // entry.target.classList.add('animate__fadeInLeft');
+//         }
+//     });
+// }, { threshold: 0.2});
+
+elementos.forEach((elemento) => {
+    observer.observe(elemento);
+});
 });
 const buttons = document.querySelectorAll(".reservas");
 const modal = document.querySelector(".modal");
