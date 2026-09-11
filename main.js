@@ -20,9 +20,9 @@ window.addEventListener("scroll", function () {
 //     });
 // }, { threshold: 0.2});
 
-elementos.forEach((elemento) => {
-    observer.observe(elemento);
-});
+// elementos.forEach((elemento) => {
+//     observer.observe(elemento);
+// });
 });
 const buttons = document.querySelectorAll(".reservas");
 const modal = document.querySelector(".modal");
