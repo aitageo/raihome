@@ -251,6 +251,10 @@ header.scrolled .nav-link:hover {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 .ubicacion {
     text-align: center;
@@ -260,7 +264,7 @@ header.scrolled .nav-link:hover {
     margin: auto;
     display: flex;
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin-bottom: 5rem;
 }
 
@@ -299,6 +303,115 @@ iframe {
     color: #48e;
     text-align: center;
     height: 100%;
+}
+/* ================================
+   MODAL DE POLÍTICAS
+================================ */
+
+#politicasModal .modal-dialog {
+    max-width: 900px;
+}
+
+#politicasModal .modal-content {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+#politicasModal .modal-header {
+    padding: 22px 28px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#politicasModal .modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+#politicasModal .politicas-body {
+    padding: 30px 38px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Títulos de cada política */
+#politicasModal .politicas-body h5 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #333;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#politicasModal .politicas-body h5:first-child {
+    margin-top: 0;
+}
+
+/* Párrafos */
+#politicasModal .politicas-body p {
+    margin-bottom: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: #555;
+}
+
+/* Área desplazable */
+#politicasModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Barra de desplazamiento */
+#politicasModal .modal-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+#politicasModal .modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#politicasModal .modal-body::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+#politicasModal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* Pie del modal */
+#politicasModal .modal-footer {
+    padding: 15px 28px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Adaptación para celular */
+@media (max-width: 576px) {
+
+    #politicasModal .politicas-body {
+        padding: 22px 20px;
+    }
+
+    #politicasModal .modal-title {
+        font-size: 1.35rem;
+    }
+
+    #politicasModal .politicas-body h5 {
+        font-size: 0.9rem;
+    }
+
+    #politicasModal .politicas-body p {
+        font-size: 0.87rem;
+        line-height: 1.65;
+    }
 }
 
 

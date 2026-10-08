@@ -1,28 +1,41 @@
 window.addEventListener("scroll", function () {
+    const navlink = this.document.querySelector('.nav-link');
     const header = document.querySelector("header");
     const botonReserva = document.querySelector(".reservas");
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
         botonReserva.style.display = "block";
+        navlink.style.color = "#000"
     } else {
         header.classList.remove("scrolled");
         botonReserva.style.display = "none";
     }
-    
-// const elementos = document.querySelectorAll('.scroll-animate');
-// const observer = new IntersectionObserver((entries) => {
-//        entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//              console.log("ENTRÓ AL VIEWPORT:", entry.target);
-//             entry.target.classList.add('animate__animated');
-//             // entry.target.classList.add('animate__fadeInLeft');
-//         }
-//     });
-// }, { threshold: 0.2});
 
-// elementos.forEach((elemento) => {
-//     observer.observe(elemento);
-// });
+    //Api interceptionObserver
+const galeriaSuperior = document.querySelector('.galeria-superior');
+const galeriaInferior = document.querySelector('.galeria-inferior');
+const observerSuperior = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.animate__animated').forEach(elemento => {
+                elemento.classList.add('animate__fadeInLeft');
+            });
+            observerSuperior.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+const observerInferior = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.animate__animated').forEach(elemento => {
+                elemento.classList.add('animate__fadeInRight');
+            });
+            observerInferior.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+observerSuperior.observe(galeriaSuperior);
+observerInferior.observe(galeriaInferior);
 });
 const buttons = document.querySelectorAll(".reservas");
 const modal = document.querySelector(".modal");
@@ -83,4 +96,7 @@ const mensajeWhatsApp = encodeURIComponent(mensaje);
         document.getElementById("formReserva").reset();
         window.location.href = `https://wa.me/${telefono}?text=${mensajeWhatsApp}`;
     }, 1500);
-});
+
+})
+
+
